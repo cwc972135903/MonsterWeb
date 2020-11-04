@@ -1,0 +1,454 @@
+@charset "UTF-8";
+
+/* 1 菜单相关------------------------------------------------------------------------------------------------------------------ */
+
+/* logo背景色  */
+.custom-theme-1 .sidebar-logo-container{
+    background:#1d447e;
+}
+
+/* 子菜单背景色 */
+.custom-theme-1 #app .sidebar-container .nest-menu .el-submenu > .el-submenu__title, 
+.custom-theme-1 #app .sidebar-container .el-submenu .el-menu-item{
+    background-color: #235094 !important;
+}
+
+/* 菜单项hover背景色 variables.menuHover */
+.custom-theme-1 #app .sidebar-container .submenu-title-noDropdown:hover,
+.custom-theme-1 #app .sidebar-container .el-submenu__title:hover {
+  background-color: #1d447e !important;
+}
+
+.custom-theme-1 .el-menu--vertical .nest-menu .el-submenu > .el-submenu__title:hover,
+.custom-theme-1 .el-menu--vertical .el-menu-item:hover {
+  background-color: #1d447e !important;
+}
+
+
+/* 顶级目录菜单项hover背景色 variables.subMenuBg */
+.custom-theme-1 #app .sidebar-container .submenu-title-noDropdown:hover,
+.custom-theme-1 #app .sidebar-container .el-submenu__title:hover {
+  background-color: #1d447e !important;
+}
+
+/* 菜单项hover背景色 variables.subMenuBg */
+.custom-theme-1 .el-menu--vertical .nest-menu .el-submenu > .el-submenu__title:hover,
+.custom-theme-1 .el-menu--vertical .el-menu-item:hover {
+  background-color: #235094 !important;
+}
+
+/*子菜单hover variables.subMenuHover   */
+.custom-theme-1 #app .sidebar-container .nest-menu .el-submenu > .el-submenu__title:hover, 
+.custom-theme-1 #app .sidebar-container .el-submenu .el-menu-item:hover {
+    background-color: #1d447e !important;
+}
+
+
+/* 2 分页栏控件相关------------------------------------------------------------------------------------------------------------------ */
+
+/* 分页栏控件当前选中按钮背景色 */
+.custom-theme-1 .el-pagination.is-background .el-pager li:not(.disabled).active{
+    background-color:#008df7;
+}
+
+/* 分页按钮及 向前向后按钮 */
+.custom-theme-1 .el-pagination.is-background .btn-prev, 
+.custom-theme-1 .el-pagination.is-background .btn-next, 
+.custom-theme-1 .el-pagination.is-background .el-pager li{
+  border: 1px solid #d3d9e2; 
+}
+
+/* 分页按钮 */
+.custom-theme-1 .el-pagination.is-background .el-pager li{ 
+  font-size: 14px;
+  color: #5c6268;
+}
+
+/* 分页按钮hover */
+.custom-theme-1 .el-pagination.is-background .el-pager li:hover{
+  border: 1px solid #008df7;
+}
+
+/* 分页栏下的按钮 */
+.custom-theme-1 .el-pagination.is-background .el-input--mini .el-input__inner{
+  color: #606266;
+}
+
+/* 总条数文本 */
+.custom-theme-1 .el-pagination__total{
+  font-size: 12px;
+  color: #5c6268;
+}
+
+/* 禁用时 */
+.custom-theme-1 .el-pagination.is-background .btn-prev:disabled, 
+.custom-theme-1 .el-pagination.is-background .btn-next:disabled{
+  border: 1px solid #d3d9e2;
+  background-color:#f5f5f5;
+  color: #b8bec8;
+}
+ 
+
+/* 3 table相关------------------------------------------------------------------------------------------------------------------ */
+
+/* 表头背景色 */
+.custom-theme-1 .el-table th{
+  background-color:#f4f7fd;
+}
+/* 表头字体颜色 */
+.custom-theme-1 .el-table thead{
+  font-size: 14px;
+  font-weight:bold;
+  color: #242b33;
+}
+
+/* 单元格 横线 */
+.custom-theme-1 .el-table--border th, .el-table--border td{
+  border-right: 1px solid #d7dce3;
+}
+
+/* 单元格 竖线 */
+.custom-theme-1 .el-table th.is-leaf, .el-table td{
+  border-bottom: 1px solid #d7dce3;
+}
+
+/* table 下边框 */
+.custom-theme-1 .el-table--group::after, 
+.custom-theme-1 .el-table--border::after, 
+.custom-theme-1 .el-table::before { 
+  background-color:#d7dce3
+}
+
+/* table fixed 下边框 */
+.custom-theme-1 .el-table__fixed::before,
+.custom-theme-1 .el-table__fixed-right::before{
+  background-color:#d7dce3
+}
+
+/* cell 文本 */
+.custom-theme-1 .el-table--mini {
+  font-size: 14px;
+  color: #303740;
+}
+
+/* 边框 */
+.custom-theme-1 .el-table--group, .el-table--border{   
+  border: 1px solid #d3d9e2;
+}
+
+/* table（非斑马纹） 选中行的高亮颜色 */
+.custom-theme-1 .el-table__body tr.current-row > td {
+  background-color: #dbebfb; 
+}
+
+/* table 鼠标移上去的颜色 */
+.custom-theme-1 .el-table--enable-row-hover .el-table__body tr:hover>td{
+	background-color: #e4f1fd; 
+}
+
+/* 4 table header相关--------------------------------------------------------------------------------------------------------------- */
+
+/* table header 组件 */
+.custom-theme-1 .el-table_header{   
+  color: #242b33;
+}
+.custom-theme-1 .el-table_title{ 
+  font-size: 15px;
+  font-weight: bold; 
+  /* padding-left: 16px;  */
+  /* padding-top: 13px; */
+  /* height: 48px; */
+}
+
+/* toolbar */
+/* .custom-theme-1 .el-table_toolbar{
+  padding-left: 8px;
+} */
+
+/* toolbar.button */
+/* .custom-theme-1 .el-table_toolbar .el-button{
+  margin-left: 8px;
+} */
+
+
+/* 5 tagview相关------------------------------------------------------------------------------------------------------------------ */
+
+/* 非选中项 */
+.custom-theme-1 .tags-view-container .tags-view-wrapper .tags-view-item{
+  color:#5c6268;
+}
+
+/* 选中项 */
+.custom-theme-1 .tags-view-container .tags-view-wrapper .tags-view-item.active{
+  background-color:#e4ebf2;
+  color:#5c6268;
+  border-color: #e4ebf2;
+}
+/* 删除icon hover */
+.custom-theme-1 .tags-view-wrapper .tags-view-item .el-icon-close:hover, 
+.custom-theme-1 .tags-view-wrapper .tags-view-item .el-icon-refresh:hover{
+  background-color: #c0c8d1;
+}
+
+/* 左侧小圆点 */
+.custom-theme-1 .tags-view-container .tags-view-wrapper .tags-view-item.active::before{
+  background:rgb(119, 155, 210)
+}
+
+/* 6 按钮相关------------------------------------------------------------------------------------------------------------------ */
+
+.custom-theme-1 .el-button--default{
+  color:#5C6268;
+  border-color:#d3d9e2;
+  background-color:#FFFFFF;
+}
+
+.custom-theme-1 .el-button--default:hover{
+  color:#008df7;
+  border-color:#95d0fc;
+  background-color:#dff1fe;
+}
+
+.custom-theme-1 .el-button--default:active{
+  color:#008df7;
+  border-color:#2d90db;
+  background-color:#dff1fe;
+}
+
+/* button--primaty */
+.custom-theme-1 .el-button--primary{
+  color:#FFFFFF;
+  background-color:#008df7;
+}
+
+.custom-theme-1 .el-button--primary:hover{
+  color:#FFFFFF;
+  background-color:#269ef8;
+}
+
+.custom-theme-1 .el-button--primary:active{
+  color:#FFFFFF;
+  background-color:#0078d2;
+}
+ 
+
+/* button--mini */
+/* .custom-theme-1 .el-button--mini{
+  padding: 6px 16px;
+  font-size:14px;
+} */
+
+/* button--text 文本链接 */
+.custom-theme-1 .el-button--text {
+  border-color: transparent;
+  color: #008df7;
+  background: transparent;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.custom-theme-1 .el-button--text:hover {
+  border-color: transparent;
+  color: #269ef8;
+  background: transparent;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.custom-theme-1 .el-button--text:active {
+  border-color: transparent;
+  color: #0078d2;
+  background: transparent;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* 紧跟查询条件的button*/ 
+/* .custom-theme-1 .filter-container button:nth-of-type(1){
+  margin-left: 16px;
+} */
+
+
+/* 7 表单控件相关 ------------------------------------------------------------------------------------------------------------------*/
+
+/* div */
+/* .custom-theme-1 .el-input--mini{
+  margin-left: 16px;
+  padding-right: 16px;
+}
+
+.custom-theme-1 .left-container .el-input--mini{
+  padding-right:16px;
+} */
+
+/* div.input */
+.custom-theme-1 .el-input--mini .el-input__inner{
+  border-color:#D3D9E2;
+  font-size: 14px;
+  color: #303740;
+}
+
+.custom-theme-1 .el-input--mini .el-input__inner:focus{
+  border-color:#008DF7;
+}
+
+.custom-theme-1 .el-input.is-disabled .el-input__inner{
+  border-color:#D3D9E2;
+  background-color: #F5F5F5;
+}
+
+/* 查询条件input输入框无间隔 */
+.custom-theme-1 .filter-item.el-select + .el-input{
+  margin-left: 5px;
+}
+
+/* 校验提示边框 */
+.custom-theme-1 .el-form-item.is-error .el-input__inner, 
+.custom-theme-1 .el-form-item.is-error .el-input__inner:focus, 
+.custom-theme-1 .el-form-item.is-error .el-textarea__inner, 
+.custom-theme-1 .el-form-item.is-error .el-textarea__inner:focus{
+  border-color:#FE5353;
+}
+
+/* 校验文本 */
+.custom-theme-1 .el-form-item__error{
+  color:#FE5353;
+}
+
+/* input.suffix 图标后缀*/
+.custom-theme-1 .el-input__suffix{ 
+  color: #5c6268;
+}
+
+/* input.prefix 图标前缀 */
+/* .custom-theme-1 .el-input__prefix{
+  padding-left: 16px;
+} */
+
+/* 下拉框右侧下拉按钮 */
+.custom-theme-1 .el-select .el-input .el-select__caret{
+  color:#8c939b;
+}
+
+/* 8 checkbox相关 ------------------------------------------------------------------------------------------------------------------*/
+.custom-theme-1 .el-checkbox__inner{
+  /* width:16px;
+  height: 16px; */
+  border: 1px solid #d3d9e2;
+}
+
+/* 选中时 */
+.custom-theme-1 .el-checkbox__input.is-checked .el-checkbox__inner{
+  background-color: #008df7;
+  border-color: #008df7;
+}
+
+/* 9 tree相关 ------------------------------------------------------------------------------------------------------------------*/
+.custom-theme-1 .el-tree-node{
+  font-size: 14px;
+  color: #5c6268;
+}
+
+.custom-theme-1 .el-tree-node__content:hover {
+  background-color: #e4f1fd; 
+}
+
+/* 选中node */
+.custom-theme-1 .el-tree-node.is-current > .el-tree-node__content {  
+  color:#008df7;
+}
+
+/* 三角图标 */
+/* .custom-theme-1 .el-tree-node__expand-icon{
+  color: #d3d9e2;
+} */
+
+/* 10 滚动条相关 ------------------------------------------------------------------------------------------------------------------*/
+
+.custom-theme-1 ::-webkit-scrollbar-thumb{
+  background-color: #c0c8d1;
+}
+
+.custom-theme-1 ::-webkit-scrollbar-thumb:hover {
+  background-color: #b1bbc6; 
+}
+
+/* 11 下拉框相关 ------------------------------------------------------------------------------------------------------------------*/
+
+.custom-theme-1 .el-select-dropdown__item{
+  color:#303740
+}
+
+.custom-theme-1 .el-select-dropdown__item.hover{
+  /* color:#2eb99b; */
+  background-color: #F0F8FF;
+}
+.custom-theme-1 .el-select-dropdown__item.selected{
+  color:#008DF7
+}
+
+.custom-theme-1 .el-select-dropdown__item.is-disabled{
+  color:#B8BEC8
+}
+
+/* 12 日期框相关 ------------------------------------------------------------------------------------------------------------------*/
+.custom-theme-1 .el-date-picker__header{
+  background-color:#F4F7FD;
+}
+
+/* icon */
+.custom-theme-1 .el-picker-panel__icon-btn{
+  color: #8C939B;
+}
+
+/* 当日 */
+.custom-theme-1 .el-date-table td.today{
+  border: 1px solid #008DF7; 
+  background-color: #FFFFFF;
+  color: #008DF7;
+}
+ /* 选中 */
+ .custom-theme-1 .el-date-table td.current:not(.disabled) span {
+  color: #FFFFFF;
+  background-color: #008DF7;
+}
+
+.custom-theme-1 .el-date-table td span{
+  border-radius:0%;
+}
+
+/* 13 数字框相关 ------------------------------------------------------------------------------------------------------------------*/
+
+.custom-theme-1 .el-input-number .el-input__inner{
+  color: #303740;
+}
+
+/* 加减按钮 */
+.custom-theme-1 .el-input-number__decrease, 
+.custom-theme-1 .el-input-number__increase{
+  background:#F4F7FD;
+  color: #8C939B;
+}
+
+/* .custom-theme-1 .el-input-number__decrease{
+  margin-left:16px;
+}
+
+.custom-theme-1 .el-input-number__increase{
+  margin-right:-16px;
+} */
+
+
+/* 16 tooltip相关 ------------------------------------------------------------------------------------------------------------------*/
+/* tooltip太长 显示不完 */
+.custom-theme-1 .el-tooltip__popper {
+  max-width: 800px;
+  padding: 16px;
+}
+
+
+
+
+
+
+

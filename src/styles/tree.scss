@@ -1,0 +1,19 @@
+/*
+ * @Descripttion: 树形控件样式
+ * @version: 1.0
+ * @Author: wenchao.chai
+ * @Date: 2019-07-08 13:54:18
+ * @LastEditors: wenchao.chai
+ * @LastEditTime: 2019-07-08 14:10:21
+ */
+ 
+.el-tree-node.is-current > .el-tree-node__content {
+    // background-color: #409eff;
+    font-weight: 700;
+    color:#409eff;
+}
+
+.el-tree-node__content:hover {
+    background-color: #d4dbe4;
+    color:#409eff;
+}

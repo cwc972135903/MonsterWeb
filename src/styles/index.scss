@@ -1,0 +1,304 @@
+@import './variables.scss';
+@import './mixin.scss';
+@import './transition.scss';
+@import './element-ui.scss';
+@import './sidebar.scss';
+@import './btn.scss';
+@import './tree.scss';
+@import './scrollbar.scss';
+
+body {
+  height: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+}
+
+label {
+  font-weight: 700;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+// 提示框
+span[tooltip]:hover:after {
+  content: attr(tooltip);
+  position: absolute;
+  z-index: 1;
+  bottom:5px;
+  // right: -20px;
+  border: 1px solid;
+  padding: 3px 6px;
+  background: white;
+  border-radius: 4px;
+}
+
+#app {
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.no-padding {
+  padding: 0px !important;
+}
+
+.padding-content {
+  padding: 4px 0;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+div:focus {
+  outline: none;
+}
+
+.fr {
+  float: right;
+}
+
+.fl {
+  float: left;
+}
+
+.pr-5 {
+  padding-right: 5px;
+}
+
+.pl-5 {
+  padding-left: 5px;
+}
+
+.block {
+  display: block;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.inlineBlock {
+  display: block;
+}
+
+.clearfix {
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+}
+
+code {
+  background: #eef1f6;
+  padding: 15px 16px;
+  margin-bottom: 20px;
+  display: block;
+  line-height: 36px;
+  font-size: 15px;
+  font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+
+  a {
+    color: #337ab7;
+    cursor: pointer;
+
+    &:hover {
+      color: rgb(32, 160, 255);
+    }
+  }
+}
+
+.warn-content {
+  background: rgba(66, 185, 131, .1);
+  border-radius: 2px;
+  padding: 16px;
+  padding: 1rem;
+  line-height: 1.6rem;
+  word-spacing: .05rem;
+
+  a {
+    color: #42b983;
+    font-weight: 600;
+  }
+}
+
+//main-container全局样式
+.app-container {
+  padding-top: 5px;
+  padding-left: 10px;
+}
+
+.components-container {
+  margin: 30px 50px;
+  position: relative;
+}
+
+.pagination-container {
+  margin-top: 0px;
+}
+
+.text-center {
+  text-align: center
+}
+
+.sub-navbar {
+  height: 50px;
+  line-height: 50px;
+  position: relative;
+  width: 100%;
+  text-align: right;
+  padding-right: 20px;
+  transition: 600ms ease position;
+  background: linear-gradient(90deg, rgba(32, 182, 249, 1) 0%, rgba(32, 182, 249, 1) 0%, rgba(33, 120, 241, 1) 100%, rgba(33, 120, 241, 1) 100%);
+
+  .subtitle {
+    font-size: 20px;
+    color: #fff;
+  }
+
+  &.draft {
+    background: #d0d0d0;
+  }
+
+  &.deleted {
+    background: #d0d0d0;
+  }
+}
+
+.link-type,
+.link-type:focus {
+  color: #337ab7;
+  cursor: pointer;
+
+  &:hover {
+    color: rgb(32, 160, 255);
+  }
+}
+
+.filter-container {
+  padding-bottom: 5px;
+
+  .filter-item {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 5px;
+  }
+}
+
+//refine vue-multiselect plugin
+.multiselect {
+  line-height: 16px;
+}
+
+.multiselect--active {
+  z-index: 1000 !important;
+}
+
+// table 下边框
+.el-table--group::after,
+.el-table--border::after,
+.el-table::before {
+  // position: relative; //隐藏table 下 右网格
+  background-color: #c5c5c5
+}
+
+//table fixed 下边框
+.el-table__fixed::before,
+.el-table__fixed-right::before {
+  background-color: #c5c5c5
+}
+
+.el-table__body tr.current-row>td {
+  background-color: #e5e5e5; //table（非斑马纹） 选中行的高亮颜色
+}
+
+.el-table--enable-row-hover .el-table__body tr:hover>td {
+  background-color: #e5e5e5; //table 鼠标移上去的颜色
+}
+
+//table fix 时 固定列下边紧靠滚动上方的线 隐藏掉
+.el-table__fixed::before,
+.el-table__fixed-right::before {
+  display: none;
+}
+
+// 解决表格错位问题
+.el-table--border th.gutter:last-of-type {
+  display: block!important;
+  width: 17px!important;
+}
+
+
+body .el-table th.gutter {
+  display: none;
+  // display: table-cell!important; //解决el-table头与内容有时未对齐的情况
+}
+
+// 表单控件宽度
+.form-input-item {
+  width: 200px;
+  margin-bottom: 5px;
+}
+
+.el-dialog__body {
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+}
+
+//拖拽表格transfer style
+.sortable-ghost {
+  opacity: 0.8;
+  color: #fff !important;
+  background: #42b983 !important;
+}
+
+// 树控件node内的input
+.tree_inner_input .el-input__inner {
+  height: 25px;
+}
+
+// table textarea 去除边框 form-input-table
+.form-input-table>textarea {
+  border: none;
+}
+
+// input append后的按钮样式 
+.append-btn-primary {
+  color: #FFFFFF !important;
+  background-color: #1890ff !important;
+  border-color: #1890ff !important;
+}
+// 表单label
+.el-form-item__label{
+  font-weight:500;
+}
+
+// dialog title
+.el-dialog__title{
+  font-size: 15px;
+  color: #606266;
+}
+
