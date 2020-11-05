@@ -3,8 +3,8 @@
  * @version: 
  * @Author: wenchao.chai
  * @Date: 2019-09-20 17:43:20
- * @LastEditors: wenchao.chai
- * @LastEditTime: 2020-09-14 11:13:31
+ * @LastEditors: hangjie.zhu
+ * @LastEditTime: 2020-11-05 13:37:12
  */
 'use strict'
 const path = require('path')
@@ -14,7 +14,7 @@ function resolve(dir) {
   return path.join(__dirname, dir)
 }
 
-const name = 'xCRMS信用风险管理系统' // page title
+const name = 'bZhi2后台管理系统' // page title
 const port = 9527 // dev port  
 
 // All configuration item explanations can be find in https://cli.vuejs.org/config/

@@ -22,7 +22,7 @@ vue2 + vuex + vue-router + axios + element ui  + i18n(国际化)
 ```js
 public\static\config\env.js 
 # base api for server  
-VUE_APP_BASE_API_XCRMS_ENTIRE:"http://127.0.0.1:8090/xcrms",
+VUE_APP_BASE_API_BZHI2_ENTIRE:"http://127.0.0.1:8090/xcrms",
 
 使用上：  
 mock地址：url: process.env.VUE_APP_BASE_API_ENTIRE + '/routes', //加前缀  

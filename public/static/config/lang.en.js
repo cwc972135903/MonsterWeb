@@ -73,7 +73,7 @@ window.lang.enLocale = {
     selecttree:'selecttree',
     iframe:'iframe',
     baidu:'baidu',
-    XCRMS:'XCRMS',
+    bZhi2:'bZhi2',
     layoutSetting:'layoutSetting',
     layoutGroupSetting:'layoutGroupSetting',
     layoutComponentList:"layoutComponentList",

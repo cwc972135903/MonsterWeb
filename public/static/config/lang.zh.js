@@ -78,7 +78,7 @@ window.lang.zhLocale = {
       selecttree: "树形下拉框",
       iframe: "外链",
       baidu: "百度",
-      XCRMS: "XCRMS",
+      bZhi2: "bZhi2",
       layoutSetting: "布局配置页面",
       layoutGroupSetting: "布局配置组件",
       fieldList: "布局字段列表",

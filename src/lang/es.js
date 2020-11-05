@@ -3,8 +3,8 @@
  * @version: 
  * @Author: wenchao.chai
  * @Date: 2019-04-02 09:34:12
- * @LastEditors: yapeng.wang
- * @LastEditTime: 2020-05-29 09:22:13
+ * @LastEditors: hangjie.zhu
+ * @LastEditTime: 2020-11-05 13:37:58
  */
 
 export default {
@@ -82,7 +82,7 @@ export default {
     selecttree:'selecttree',
     iframe:'iframe',
     baidu:'baidu',
-    XCRMS:'XCRMS',
+    bZhi2:'bZhi2',
     layoutSetting:'layoutSetting',
     layoutGroupSetting:'layoutGroupSetting',
     layoutComponentList:"layoutComponentList",

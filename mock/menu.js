@@ -854,7 +854,7 @@ const menus = [
         componentPath: "/iframe/index",
         name: "innerIframe",
         meta: {
-          title: "XCRMS",
+          title: "bZhi2",
           icon: "people"
         }
       }

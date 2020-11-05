@@ -9,7 +9,7 @@
 window.env = {
     VUE_ENV:"dev",//dev prod
     // base api for server xcrms
-    VUE_APP_BASE_API_XCRMS_ENTIRE:"http://127.0.0.1:8090/xcrms",
+    VUE_APP_BASE_API_BZHI2_ENTIRE:"http://127.0.0.1:8090/xcrms",
     // 上传大小限制 M
     VUE_APP_UPLOAD_LIMIT : 120,
     // 是否启用图片滑动校验

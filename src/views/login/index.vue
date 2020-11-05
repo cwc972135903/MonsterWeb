@@ -4,7 +4,7 @@
  * @Author: wenchao.chai
  * @Date: 2019-09-20 17:43:15
  * @LastEditors: hangjie.zhu
- * @LastEditTime: 2020-11-04 18:18:48
+ * @LastEditTime: 2020-11-05 13:35:47
  -->
 <template>
   <div class="login-container">
@@ -207,7 +207,7 @@ $cursor: #fff;
 </style>
 
 <style lang="scss" scoped>
-$bg: rgb(250, 233, 233);
+$bg: rgb(255, 255, 255);
 $dark_gray: #889aa4;
 $light_gray: #eee;
 
@@ -221,7 +221,7 @@ $light_gray: #eee;
     position: relative;
     width: 520px;
     max-width: 100%;
-    padding: 160px 35px 0;
+    padding: 200px 35px 0;
     margin: 0 auto;
     overflow: hidden;
   }

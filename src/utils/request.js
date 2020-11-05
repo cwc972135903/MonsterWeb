@@ -14,7 +14,7 @@ import { getToken } from '@/utils/auth'
 
 // create an axios instance
 const service = axios.create({
-  baseURL: window.env.VUE_APP_BASE_API_XCRMS_ENTIRE, //process.env.VUE_APP_BASE_API_XCRMS_ENTIRE,// process.env.VUE_APP_BASE_API_XCRMS, // api 的 base_url
+  baseURL: window.env.VUE_APP_BASE_API_BZHI2_ENTIRE, //process.env.VUE_APP_BASE_API_BZHI2_ENTIRE,// process.env.VUE_APP_BASE_API_BZHI2, // api 的 base_url
   withCredentials: true, // 跨域请求时发送 cookies
   timeout: 500000 // request timeout
 })

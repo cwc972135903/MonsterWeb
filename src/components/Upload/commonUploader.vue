@@ -3,8 +3,8 @@
  * @version: 1.0
  * @Author: wenchao.chai
  * @Date: 2019-07-17 11:30:39
- * @LastEditors: wenchao.chai
- * @LastEditTime: 2020-05-25 13:42:21
+ * @LastEditors: hangjie.zhu
+ * @LastEditTime: 2020-11-05 13:38:55
  -->
 
 <template>
@@ -200,7 +200,7 @@ export default {
   },
   data() {
     return {
-        baseUrl: window.env.VUE_APP_BASE_API_XCRMS_ENTIRE, // process.env.VUE_APP_BASE_API_XCRMS_ENTIRE,
+        baseUrl: window.env.VUE_APP_BASE_API_BZHI2_ENTIRE, // process.env.VUE_APP_BASE_API_BZHI2_ENTIRE,
         headers:{
           token:getToken()
         },
