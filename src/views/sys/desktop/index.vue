@@ -4,21 +4,19 @@
  * @Author: wenchao.chai
  * @Date: 2019-06-26 15:08:49
  * @LastEditors: wenchao.chai
- * @LastEditTime: 2019-08-19 11:31:21
+ * @LastEditTime: 2020-11-05 17:22:43
  -->
-<!--
 <template>
   <div>
-    <layoutPage v-if="has_Init" editType="add" :params="{type:'desktop',account:account,...query}"></layoutPage>
+    测试页面
+    <!-- <layoutPage v-if="has_Init" editType="add" :params="{type:'desktop',account:account,...query}"></layoutPage> -->
   </div> 
 </template>
 
 <script>      
-import layoutPage from "@/views/layout/layoutSetting/layoutPage";
-
 export default {
   name: 'DeskTop',
-  components: { layoutPage },
+  components: { },
   directives: {},
   filters: {
 

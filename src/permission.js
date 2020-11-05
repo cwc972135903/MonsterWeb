@@ -4,7 +4,7 @@
  * @Author: wenchao.chai
  * @Date: 2019-04-02 09:34:12
  * @LastEditors: wenchao.chai
- * @LastEditTime: 2020-02-24 11:55:50
+ * @LastEditTime: 2020-11-05 16:20:34
  */
 
 import router from './router'
@@ -33,6 +33,7 @@ router.beforeEach(async(to, from, next) => {
       NProgress.done()
     } else {
       // determine whether the user has obtained his permission roles through getInfo
+      
       const hasRoles = store.getters.roles && store.getters.roles.length > 0
       if (hasRoles) {// 第一次进来时，维护roles。 具体有无to.path的权限，vueRouter 自动会判断
         next()
@@ -40,14 +41,14 @@ router.beforeEach(async(to, from, next) => {
         try {
           // get user info
           // note: roles must be a object array! such as: ['admin'] or ,['developer','editor']
+          
           const { codes } = await store.dispatch('user/getInfo')
-
           // generate accessible routes map based on roles
           const accessRoutes = await store.dispatch('permission/generateRoutes', codes)
-
+          
           // dynamically add accessible routes
           router.addRoutes(accessRoutes)
-
+              
           // hack method to ensure that addRoutes is complete
           // set the replace: true, so the navigation will not leave a history record
           next({ ...to, replace: true })
@@ -55,12 +56,7 @@ router.beforeEach(async(to, from, next) => {
           // remove token and go to login page to re-login
           await store.dispatch('user/resetToken')
           Message.error(error || 'Has Error')
-          if(loginType && loginType === "SPDB"){
-              window.location.href = loginRedirect;
-          }else{
-            //默认衡泰
-            next(`/login?redirect=${to.fullPath}`)
-          }   
+          next(`/login?redirect=${to.fullPath}`)
           NProgress.done()
         }
       }
@@ -71,12 +67,7 @@ router.beforeEach(async(to, from, next) => {
       // in the free login whitelist, go directly
       next()
     } else { 
-      if(loginType && loginType === "SPDB"){
-           window.location.href = loginRedirect;
-      }else{
-        //默认衡泰
-         next(`/login?redirect=${to.fullPath}`)
-      }    
+      next(`/login?redirect=${to.fullPath}`)
       NProgress.done()
     }
   }

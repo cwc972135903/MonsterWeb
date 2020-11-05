@@ -3,8 +3,8 @@
  * @version: 
  * @Author: wenchao.chai
  * @Date: 2019-06-21 10:18:19
- * @LastEditors: hangjie.zhu
- * @LastEditTime: 2020-11-04 18:02:38
+ * @LastEditors: wenchao.chai
+ * @LastEditTime: 2020-11-05 17:26:55
  -->
 
 <template>
@@ -56,12 +56,12 @@ import elResize from "@/directive/el-doresize";
 // import { fetchSingleHistory } from "@/api/rating";
 import DialogEditList from "@/views/demo/dialogRequest/editList";
 import DialogEditForm from "@/views/demo/dialogRequest/editForm";
- 
+
 
 export default {
   name: "DialogList",
-  components: { TableHeader,DialogEditList,DialogEditForm },
-  directives: { waves,elResize },
+  components: { TableHeader, DialogEditList, DialogEditForm },
+  directives: { waves, elResize },
   filters: {//filters可以理解为formatter 
 
   },
@@ -74,7 +74,7 @@ export default {
   },
   data() {
     return {
-      clientHeight:window.document.documentElement.clientHeight,
+      clientHeight: window.document.documentElement.clientHeight,
       //========================================列表查询==================================
       list: [],//组件列表 
       listLoading: false,
@@ -98,20 +98,20 @@ export default {
      * @return: 
      * @other: 
      */
-    baseHeight:{
-      get:function(){
-          let height; 
-          if (this.layoutHeight == -1){
-              height = this.clientHeight
-          }else{
-              height = this.layoutHeight + this.$store.getters.marginHeightTopMainContent;
-          }
-          return height;
+    baseHeight: {
+      get: function () {
+        let height;
+        if (this.layoutHeight == -1) {
+          height = this.clientHeight
+        } else {
+          height = this.layoutHeight + this.$store.getters.marginHeightTopMainContent;
+        }
+        return height;
       }
     },
     tableHeight: {
-      get: function() { 
-        return this.baseHeight-150;
+      get: function () {
+        return this.baseHeight - 150;
       }
     }
   },
@@ -127,20 +127,20 @@ export default {
     initData() {
       this.getList();
     },
-     /**
-    * @name: 监听client size change
-    * @param {type} 
-    * @return: 
-    * @other: 
-    */
-    contentSizeChange: function(domWidth,domHeight,windowClientWidth,windowClientHeight) {
-      this.clientHeight=windowClientHeight;
+    /**
+   * @name: 监听client size change
+   * @param {type} 
+   * @return: 
+   * @other: 
+   */
+    contentSizeChange: function (domWidth, domHeight, windowClientWidth, windowClientHeight) {
+      this.clientHeight = windowClientHeight;
     },
     /**
      * @name: 获取列表  
      */
     getList() {
-      this.listLoading=true;
+      this.listLoading = true;
       // fetchSingleHistory("CP20141223134202631").then(response => {
       //   this.list= [{
       //     O_CODE:"CP20141223134202631",
@@ -153,6 +153,13 @@ export default {
       //   this.listLoading=false;
       //   this.$notify.error({ title: "获取列表",message: error,duration: 2000 });
       // });
+      this.list = [{
+        O_CODE: "CP20141223134202631",
+        O_NAME: "测试数据",
+        B_GRADE2: "AAA",
+        F_GRADE: "A"
+      }];// response.data;
+      this.listLoading = false;
     },
     //====================================edit===================================================
     /**
@@ -161,17 +168,17 @@ export default {
      * @return: 
      * @other: 
      */
-    showDialogList: function(row) {
-      this.editObjList.params={
+    showDialogList: function (row) {
+      this.editObjList.params = {
         oCode: row.O_CODE
       };
-      this.editObjList.visible=true;
+      this.editObjList.visible = true;
     },
-    showDialogForm: function(row) {
-      this.editObjForm.params={
+    showDialogForm: function (row) {
+      this.editObjForm.params = {
         oCode: row.O_CODE
       };
-      this.editObjForm.visible=true;
+      this.editObjForm.visible = true;
     }
   }
 };

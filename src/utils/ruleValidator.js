@@ -2,7 +2,7 @@
  * @Descripttion: 公用的一些表单校验 及配置化的自定义校验
  * @version: 1.0
  * @Author: wenchao.chai
- * @LastEditors: hangjie.zhu
+ * @LastEditors: wenchao.chai
  * @Date: 2019-04-24 10:06:32
  * @LastEditTime: 2020-11-04 16:07:55
  */

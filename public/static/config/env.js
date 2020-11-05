@@ -4,7 +4,7 @@
  * @Author: wenchao.chai
  * @Date: 2020-02-24 10:54:03
  * @LastEditors: wenchao.chai
- * @LastEditTime: 2020-09-28 19:12:41
+ * @LastEditTime: 2020-11-05 17:24:03
  */
 window.env = {
     VUE_ENV:"dev",//dev prod
@@ -22,7 +22,7 @@ window.env = {
     //websocket相关配置
     VUE_WEBSOCKET:{
         baseAddress:"ws://127.0.0.1:8088",//"ws://192.168.6.110:8088",
-        enable:true,//是否启用websocket
+        enable:false,//是否启用websocket
         reconnection:false,//是否启用心跳及重连，默认false
         reconnectionMaxAttempts:5,//重连最大尝试次数  默认5
         reconnectionDelay:5000 //再次重连等待时常及心跳频率 ms 默认5000

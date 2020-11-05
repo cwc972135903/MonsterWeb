@@ -4,7 +4,7 @@
  * @Author: wenchao.chai
  * @Date: 2019-04-02 09:34:12
  * @LastEditors: wenchao.chai
- * @LastEditTime: 2020-09-28 13:40:34
+ * @LastEditTime: 2020-11-05 17:16:48
  */
 
 import { constantRoutes } from '@/router' 
@@ -132,7 +132,7 @@ const actions = {
       getMenu().then(response => {   
         let asyncRoutesData = response.data 
         let asyncRoutes = cleanRouters(asyncRoutesData) 
-        let accessedRoutes = filterAsyncRoutesXcrms(asyncRoutes, codes)   
+        let accessedRoutes = filterAsyncRoutesXcrms(asyncRoutes, codes)
         commit('SET_ROUTES', accessedRoutes)
         resolve(accessedRoutes)
       })  

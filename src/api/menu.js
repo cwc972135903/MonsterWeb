@@ -3,8 +3,8 @@
  * @version:
  * @Author: wenchao.chai
  * @Date: 2019-04-20 13:38:30
- * @LastEditors: hangjie.zhu
- * @LastEditTime: 2020-11-04 18:00:06
+ * @LastEditors: wenchao.chai
+ * @LastEditTime: 2020-11-05 17:36:57
  */
 
 import request from "@/utils/request";
@@ -88,16 +88,16 @@ const devMenus = [
           icon: "edit"
         }
       },
-      // 树表格demo 开发示例
-      {
-        path: "tableTree",
-        componentPath: "/demo/tableTree/list",
-        name: "TableTreeDemo",
-        meta: {
-          title: "tableTreeDemo",
-          icon: "edit"
-        }
-      }
+      // // 树表格demo 开发示例
+      // {
+      //   path: "tableTree",
+      //   componentPath: "/demo/tableTree/list",
+      //   name: "TableTreeDemo",
+      //   meta: {
+      //     title: "tableTreeDemo",
+      //     icon: "edit"
+      //   }
+      // }
     ]
   },
   {
@@ -314,13 +314,23 @@ const constantMenus = [{ path: "*", redirect: "/404", hidden: true }];
 
 // server api
 export function getMenu() {
-  //暂时使用本地菜单
+  
+  
+  //todo：暂时使用本地菜单
+  let menuTree = [];
+  let response = {
+    data:[],
+    code:"200",
+    msg:"success"
+  };
   if (window.env.VUE_ENV == "dev") {
     // menuTree = menuTree.concat(devMenus);
-       menuTree = devMenu;
+       menuTree = devMenus;
    }
    response.data = menuTree;
-  return response;
+   return new Promise((resolve, reject) => {
+    resolve(response);
+  })
   // return request({
   //   url: "/menu/list/render",
   //   method: "get"

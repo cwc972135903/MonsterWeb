@@ -3,13 +3,13 @@
  * @version: 1.0
  * @Author: wenchao.chai
  * @Date: 2019-09-20 17:43:15
- * @LastEditors: hangjie.zhu
- * @LastEditTime: 2020-11-05 13:35:47
+ * @LastEditors: wenchao.chai
+ * @LastEditTime: 2020-11-05 15:16:15
  -->
 <template>
   <div class="login-container">
     <el-form ref="loginForm" :model="loginForm" :rules="loginRules" class="login-form" auto-complete="on" label-position="left">
-      <div class="title-container" :style="{background: bgUrl,backgroundSize: 'cover'}">
+      <div class="title-container" :style="{background: bgUrl,backgroundSize: 'cover', width:'110px', height:'110px'}">
       </div>
       <el-form-item prop="username">
         <span class="svg-container">
@@ -31,7 +31,7 @@
       <div v-if="enableSliderValidate" class="slide-validate">
         <m-validate ref="validate" :onSuccess="onSuccess" :onFail="onFail" />
       </div>
-      <el-button :loading="loading" :disabled="!sliderValidate" type="primary" style="width:100%;margin-bottom:30px;"
+      <el-button :loading="loading" :disabled="!sliderValidate" type="primary" style="width:85%;margin-bottom:30px;margin-left:35px;"
         @click.native.prevent="handleLogin">
         {{ $t('login.logIn') }}
       </el-button>
@@ -163,7 +163,7 @@ export default {
 /* 修复input 背景不协调 和光标变色 */
 /* Detail see https://github.com/PanJiaChen/vue-element-admin/pull/927 */
 
-$bg: #283443;
+$bg: #f3f3f3;
 $light_gray: #fff;
 $cursor: #fff;
 
@@ -181,25 +181,25 @@ $cursor: #fff;
     width: 85%;
 
     input {
-      background: transparent;
-      border: 0px;
+      // background: transparent;
+    //  border: 0px;
       -webkit-appearance: none;
       border-radius: 0px;
       padding: 12px 5px 12px 15px;
-      color: $light_gray;
+      // color: $light_gray;
       height: 47px;
-      caret-color: $cursor;
+     // caret-color: $cursor;
 
-      &:-webkit-autofill {
-        box-shadow: 0 0 0px 1000px $bg inset !important;
-        -webkit-text-fill-color: $cursor !important;
-      }
+      // &:-webkit-autofill {
+      //   box-shadow: 0 0 0px 1000px inset !important;
+      //   -webkit-text-fill-color: $cursor !important;
+      // }
     }
   }
 
   .el-form-item {
     border: 1px solid rgba(255, 255, 255, 0.1);
-    background: rgba(0, 0, 0, 0.1);
+    // background: rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     color: #454545;
   }
@@ -207,7 +207,7 @@ $cursor: #fff;
 </style>
 
 <style lang="scss" scoped>
-$bg: rgb(255, 255, 255);
+$bg: rgb(224, 224, 224);
 $dark_gray: #889aa4;
 $light_gray: #eee;
 
@@ -248,7 +248,8 @@ $light_gray: #eee;
 
   .title-container {
     position: relative;
-
+    margin-left: 150px;
+    
     .title {
       font-size: 26px;
       color: $light_gray;

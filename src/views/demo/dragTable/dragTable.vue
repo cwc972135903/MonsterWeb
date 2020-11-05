@@ -3,8 +3,8 @@
  * @version: 
  * @Author: wenchao.chai
  * @Date: 2019-07-05 15:46:05
- * @LastEditors: wenchao.chai
- * @LastEditTime: 2020-02-21 12:34:16
+ * @LastEditors: hangjie.zhu
+ * @LastEditTime: 2020-11-05 17:51:01
  -->
 
 <template>
@@ -16,11 +16,11 @@
         </template>
       </el-table-column>
 
-      <el-table-column width="180px" align="center" label="Date">
+      <!-- <el-table-column width="180px" align="center" label="Date">
         <template slot-scope="scope">
           <span>{{ scope.row.timestamp | parseTime('{y}-{m}-{d} {h}:{i}') }}</span>
         </template>
-      </el-table-column>
+      </el-table-column> -->
 
       <el-table-column min-width="300px" label="Title">
         <template slot-scope="scope">
@@ -34,7 +34,7 @@
         </template>
       </el-table-column>
 
-      <el-table-column width="100px" label="Importance">
+      <!-- <el-table-column width="100px" label="Importance">
         <template slot-scope="scope">
           <svg-icon v-for="n in +scope.row.importance" :key="n" icon-class="star" class="icon-star" />
         </template>
@@ -52,7 +52,7 @@
             {{ scope.row.status }}
           </el-tag>
         </template>
-      </el-table-column>
+      </el-table-column> -->
 
       <el-table-column align="center" label="Drag" width="80">
         <template slot-scope="{}">
@@ -95,9 +95,24 @@ export default {
     this.getList()
   },
   methods: {
-    async getList() {
+    getList() {
       this.listLoading = true
-      const { data } = await fetchList(this.listQuery)
+      const data = {
+         items:[{
+            id:"1",
+            title:"测试数据1",
+            author:"cwc"
+         },{
+             id:"2",
+            title:"测试数据2",
+            author:"hsj"
+         },{
+             id:"3",
+            title:"测试数据3",
+            author:"hsj"
+         }],
+         total:2
+      }
       this.list = data.items
       this.total = data.total
       this.listLoading = false 

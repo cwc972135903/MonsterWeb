@@ -3,8 +3,8 @@
  * @version: 1.0
  * @Author: wenchao.chai
  * @Date: 2019-09-20 17:43:18
- * @LastEditors: wenchao.chai
- * @LastEditTime: 2020-08-14 16:36:29
+ * @LastEditors: hangjie.zhu
+ * @LastEditTime: 2020-11-05 18:10:25
  -->
 <template>
   <div class="navbar">
@@ -38,11 +38,11 @@
         <!-- <lang-select class="right-menu-item hover-effect" /> -->
       </template>
       <!-- <el-button @click="test">test</el-button> -->
-      <el-dropdown class="avatar-container right-menu-item hover-effect" trigger="click">
-        <div class="avatar-wrapper">
-          <!-- <img :src="avatar+'?imageView2/1/w/80/h/80'" class="user-avatar"> -->
-          <img :src="avatar" class="user-avatar">
-          <i class="el-icon-caret-bottom" />
+     <el-dropdown class="avatar-container right-menu-item hover-effect" trigger="click">
+           <div class="avatar-wrapper">
+         <!--  <img :src="avatar+'?imageView2/1/w/80/h/80'" class="user-avatar">
+           <img :src="avatar" class="user-avatar"> -->
+         <i class="el-icon-caret-bottom" />
         </div>
         <el-dropdown-menu slot="dropdown">
           <router-link to="/">
@@ -119,12 +119,7 @@ export default {
         websocketLogout();
       }
       await this.$store.dispatch('user/logout')
-      if(this.loginType&&this.loginType==="SPDB") {
-        window.location.href=this.loginRedirect;// `?redirect=${this.$route.fullPath}`; 
-      } else {
-        //默认衡泰
-        this.$router.push(`/login?redirect=${this.$route.fullPath}`)
-      }
+      this.$router.push(`/login?redirect=${this.$route.fullPath}`)
     },
     test: function() {
       // eslint-disable-next-line no-debugger

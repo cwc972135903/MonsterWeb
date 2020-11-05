@@ -3,8 +3,8 @@
  * @version: 1.0
  * @Author: wenchao.chai
  * @Date: 2019-06-10 16:08:06
- * @LastEditors: hangjie.zhu
- * @LastEditTime: 2020-11-04 17:50:00
+ * @LastEditors: wenchao.chai
+ * @LastEditTime: 2020-11-05 17:31:25
  -->
 
 <template>
@@ -198,15 +198,18 @@ export default {
     getList() {
       this.listLoading=true;
       let query=this.handleParams();
-      fetchComponentList(query).then(response => {
+      // fetchComponentList(query).then(response => {
+      //   this.listLoading=false;
+      //   this.list=response.data.list;
+      //   this.total=response.data.totalCount; 
+      //   this.currentRow=null;
+      // }).catch(error => {
+      //   this.listLoading=false;
+      //   this.$notify.error({ title: "获取列表",message: error,duration: 2000 });
+      // });
         this.listLoading=false;
-        this.list=response.data.list;
-        this.total=response.data.totalCount; 
-        this.currentRow=null;
-      }).catch(error => {
-        this.listLoading=false;
-        this.$notify.error({ title: "获取列表",message: error,duration: 2000 });
-      });
+        this.list=[];
+        this.total=0; 
     },
     /**
      * @name: 获取组件类型列表 
@@ -217,6 +220,7 @@ export default {
       // }).catch(error => {
       //   this.$notify.error({ title: "获取类型",message: error,duration: 2000 });
       // });
+       this.componentTypeOption = [];
     },
     /**
      * @name: 自定义type formatter

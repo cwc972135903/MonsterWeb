@@ -3,8 +3,8 @@
  * @version: 
  * @Author: wenchao.chai
  * @Date: 2019-06-21 10:27:05
- * @LastEditors: hangjie.zhu
- * @LastEditTime: 2020-11-04 18:02:27
+ * @LastEditors: wenchao.chai
+ * @LastEditTime: 2020-11-05 17:27:40
  -->
 
 <template>
@@ -110,6 +110,13 @@ export default {
       //   this.listLoading = false;
       //   this.$notify.error({ title: "获取历史评级结果",message: error,duration: 2000 });
       // });
+       this.list = [{
+        O_CODE: "CP20141223134202631",
+        O_NAME: "测试数据",
+        B_GRADE2: "AAA",
+        F_GRADE: "A"
+      }];// response.data;
+      this.listLoading = false;
     },
     handleClose() {
         if (this.visible) {

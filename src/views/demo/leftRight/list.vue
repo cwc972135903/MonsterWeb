@@ -3,8 +3,8 @@
  * @version: 
  * @Author: wenchao.chai
  * @Date: 2019-06-02 17:27:33
- * @LastEditors: hangjie.zhu
- * @LastEditTime: 2020-11-04 18:01:53
+ * @LastEditors: wenchao.chai
+ * @LastEditTime: 2020-11-05 17:34:41
  -->
 
 <template>
@@ -12,9 +12,10 @@
     <split-pane split="vertical" :min-percent="10" :default-percent="25">
       <template slot="paneL">
         <div class="left-container">
-          <Table-Header iconClass="component"> 
+          <Table-Header iconClass="component">
           </Table-Header>
-          <el-table ref="leftTable" v-loading="listLoadingLeft" :data="leftList" fit highlight-current-row style="width: 100%;" :height="leftTableHeight" @row-click="leftRowClick">
+          <el-table ref="leftTable" v-loading="listLoadingLeft" :data="leftList" fit highlight-current-row style="width: 100%;"
+            :height="leftTableHeight" @row-click="leftRowClick">
             <el-table-column :label="$t('table.id')" type="index" align="center" width="50"></el-table-column>
             <el-table-column label="等级模型名称" header-align="center" align="left" show-overflow-tooltip>
               <template slot-scope="scope">
@@ -32,9 +33,10 @@
       <template slot="paneR">
         <div class="right-container">
           <div id="topDiv">
-            <Table-Header iconClass="component"> 
+            <Table-Header iconClass="component">
             </Table-Header>
-            <el-table ref="rightTable" v-loading="listLoadingRight" :data="rightList" border fit highlight-current-row style="width: 100%;" :height="rightTableHeight/2">
+            <el-table ref="rightTable" v-loading="listLoadingRight" :data="rightList" border fit highlight-current-row style="width: 100%;"
+              :height="rightTableHeight/2">
               <el-table-column :label="$t('table.id')" type="index" align="center" width="50" :index="indexMethod"></el-table-column>
               <el-table-column label="等级名称" header-align="center" align="left" show-overflow-tooltip width="200">
                 <template slot-scope="scope">
@@ -49,9 +51,10 @@
             </el-table>
           </div>
           <div id="bottomDiv">
-            <Table-Header iconClass="component"> 
+            <Table-Header iconClass="component">
             </Table-Header>
-            <el-table ref="rightTable" v-loading="listLoadingRight" :data="rightList" border fit highlight-current-row style="width: 100%;" :height="rightTableHeight/2">
+            <el-table ref="rightTable" v-loading="listLoadingRight" :data="rightList" border fit highlight-current-row style="width: 100%;"
+              :height="rightTableHeight/2">
               <el-table-column :label="$t('table.id')" type="index" align="center" width="50" :index="indexMethod"></el-table-column>
               <el-table-column label="等级名称" header-align="center" align="left" show-overflow-tooltip width="200">
                 <template slot-scope="scope">
@@ -67,7 +70,7 @@
           </div>
         </div>
       </template>
-    </split-pane> 
+    </split-pane>
   </div>
 </template>
 <script>  
@@ -77,11 +80,11 @@ import permission from '@/directive/permission/index.js'; // 权限判断指令
 import elResize from "@/directive/el-doresize"; //自适应事件
 import waves from "@/directive/waves"; // Waves directive 加上这个点击有水波纹 
 // import { fetchGradeModelList, fetchGradeModelData } from "@/api/paramConfig";
- 
+
 export default {
   name: "LeftRightTable",
-  components: { TableHeader,splitPane },
-  directives: { waves,permission,elResize },
+  components: { TableHeader, splitPane },
+  directives: { waves, permission, elResize },
   props: {
     layoutHeight: {
       default: () => {
@@ -124,19 +127,19 @@ export default {
      * @other: 
      */
     baseHeight: {
-      get: function() {
+      get: function () {
         let height;
-        if(this.layoutHeight==-1) {
-          height=this.clientHeight
+        if (this.layoutHeight == -1) {
+          height = this.clientHeight
         } else {
-          height=this.layoutHeight+this.$store.getters.marginHeightTopMainContent;
+          height = this.layoutHeight + this.$store.getters.marginHeightTopMainContent;
         }
         return height;
       }
     },
     containerHeight: {
-      get: function() {
-        return this.baseHeight-90;
+      get: function () {
+        return this.baseHeight - 90;
       }
     },
     /**
@@ -146,8 +149,8 @@ export default {
      * @other: 
      */
     rightTableHeight: {
-      get: function() {
-        return this.baseHeight-170;
+      get: function () {
+        return this.baseHeight - 170;
       }
     },
     /**
@@ -157,8 +160,8 @@ export default {
      * @other: 
      */
     leftTableHeight: {
-      get: function() {
-        return this.baseHeight-170;
+      get: function () {
+        return this.baseHeight - 170;
       }
     }
   },
@@ -175,8 +178,8 @@ export default {
      * @return: 
      * @other: 
      */
-    contentSizeChange: function(newWidth,newHeight,clientWidth,clientHeight) {
-      this.clientHeight=clientHeight;
+    contentSizeChange: function (newWidth, newHeight, clientWidth, clientHeight) {
+      this.clientHeight = clientHeight;
     },
     /**
     * @name: 初始化数据
@@ -190,7 +193,7 @@ export default {
     * @name: 索引
     */
     indexMethod(index) {
-      return index+1;
+      return index + 1;
     },
 
     /**
@@ -216,6 +219,12 @@ export default {
       //   this.listLoadingLeft = false;
       //   this.$notify.error({ title: "获取列表",message: error,duration: 2000 });
       // });  
+      this.listLoadingLeft = false;
+      this.leftList = [{
+        GM_NAME: "CP2014122313420263111",
+        GM_DESC: "测试左侧数据",
+      
+      }];// response.data;
     },
     /**
      * @name: 获取列表 right
@@ -223,7 +232,7 @@ export default {
      * @other: 
      */
     getRightTableList() {
-      this.listLoadingRight = true;  
+      this.listLoadingRight = true;
       // fetchGradeModelData(this.currentRowLeft.GM_CODE).then(response=>{
       //   this.listLoadingRight = false;
       //   this.rightList = response.data;
@@ -231,13 +240,19 @@ export default {
       //   this.listLoadingRight = false;
       //   this.$notify.error({ title: "获取列表",message: error,duration: 2000 });
       // });  
-    },  
+      this.listLoadingRight = false;
+      this.rightList = [{
+        GRADE: "CP20141223134202631",
+        G_DESC: "测试数据",
+      
+      }];// response.data;
+    },
     /**
      * @name: left列表点击事件
      * @return: 
      * @other: 
      */
-    leftRowClick(row,column,event) { 
+    leftRowClick(row, column, event) {
       this.currentRowLeft = row;
       this.getRightTableList();
     }

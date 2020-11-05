@@ -3,8 +3,8 @@
  * @version: 
  * @Author: wenchao.chai
  * @Date: 2019-04-02 09:34:12
- * @LastEditors: hangjie.zhu
- * @LastEditTime: 2020-11-04 16:07:13
+ * @LastEditors: wenchao.chai
+ * @LastEditTime: 2020-11-05 17:21:53
  */
 import Vue from 'vue'
 import Router from 'vue-router'
